@@ -46,6 +46,9 @@ func _init() -> void:
 	IVStateManager.core_init_program_objects_instantiated.connect(
 			_on_core_init_program_objects_instantiated)
 	
+	# program classes
+	IVCoreInitializer.program_nodes["ShaderWarmup"] = IVShaderWarmup
+	
 	# change global init values
 	IVCoreSettings.use_threads = USE_THREADS
 	IVCoreSettings.wait_for_start = true
